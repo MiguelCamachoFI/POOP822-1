@@ -5,6 +5,8 @@
  */
 package com.mycompany.poop8;
 
+import java.util.Scanner;
+
 /**
  *
  * @author migue
@@ -54,9 +56,61 @@ public class Main {
         System.out.println(instrumento.tipoInstrumento());
         System.out.println(instrumento);
         
-        System.out.println("###Actividad extra###");
-        // Se puede acceder a las variables de la interfaz sin crear instancias
-        System.out.println("El mes "+Meses.DOS+" corresponde a:");
+        System.out.println("... Actividad extra ...");
+        System.out.println("El mes " + Meses.DOS + " corresponde a: ");
         System.out.println(Meses.NOMBRES_MESES[Meses.DOS]);
+
+        Scanner op = new Scanner(System.in);
+
+        int mes;
+        do {
+            System.out.println("\nIngrese un número de mes para ver a cual corresponde. \nPuede ingresar '0' para salir");
+            mes = op.nextInt();
+            System.out.println("");
+
+            switch (mes) {
+                case 0:
+                    System.out.println("Se eligió salir, ayooos");
+                    break;
+                case 1:
+                    System.out.println("El mes " + Meses.UNO + " corresponde a: " + Meses.NOMBRES_MESES[Meses.UNO]);
+                    break;
+                case 2:
+                    System.out.println("El mes " + Meses.DOS + " corresponde a: " + Meses.NOMBRES_MESES[Meses.DOS]);
+                    break;
+                case 3:
+                    System.out.println("El mes " + Meses.TRES + " corresponde a: " + Meses.NOMBRES_MESES[Meses.TRES]);
+                    break;
+                case 4:
+                    System.out.println("El mes " + Meses.CUATRO + " corresponde a: " + Meses.NOMBRES_MESES[Meses.CUATRO]);
+                    break;
+                case 5:
+                    System.out.println("El mes " + Meses.CINCO + " corresponde a: " + Meses.NOMBRES_MESES[Meses.CINCO]);
+                    break;
+                case 6:
+                    System.out.println("El mes " + Meses.SEIS + " corresponde a: " + Meses.NOMBRES_MESES[Meses.SEIS]);
+                    break;
+                case 7:
+                    System.out.println("El mes " + Meses.SIETE + " corresponde a: " + Meses.NOMBRES_MESES[Meses.SIETE]);
+                    break;
+                case 8:
+                    System.out.println("El mes " + Meses.OCHO + " corresponde a: " + Meses.NOMBRES_MESES[Meses.OCHO]);
+                    break;
+                case 9:
+                    System.out.println("El mes " + Meses.NUEVE + " corresponde a: " + Meses.NOMBRES_MESES[Meses.NUEVE]);
+                    break;
+                case 10:
+                    System.out.println("El mes " + Meses.DIEZ + " corresponde a: " + Meses.NOMBRES_MESES[Meses.DIEZ]);
+                    break;
+                case 11:
+                    System.out.println("El mes " + Meses.ONCE + " corresponde a: " + Meses.NOMBRES_MESES[Meses.ONCE]);
+                    break;
+                case 12:
+                    System.out.println("El mes " + Meses.DOCE + " corresponde a: " + Meses.NOMBRES_MESES[Meses.DOCE]);
+                    break;
+                default:
+                    System.out.println("Opción no válida");
+            }
+        } while (mes != 0);
     }
 }
